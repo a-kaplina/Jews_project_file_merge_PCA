@@ -1,8 +1,8 @@
 # Jews_project_file_merge_PCA
 Скрипт для объединения vcf файлов с общим vcf файлом с образцами по еврейским популяцисм, построения графиков PCA и определения принадлежности новых образцов к популяциям согласно PCA<br>
 <br>
-- скрипт нормализует (данные по нормализации сохраняет в normalization_stats.tsv), индексирует и объединяет отдельные vcf файлы с общим vcf файлом по еврейским популяциям (vcf_jews_bgz.vcf.gz);  <br>
-- из общего vcf файла удаляется один родственный образец (nx1575, он уже известен ранее, pi hat=0.5386 с образцом kl9502);  <br>
+- скрипт нормализует (данные по нормализации сохраняет в normalization_stats.tsv), индексирует и объединяет отдельные vcf.gz файлы с общим vcf.gz файлом по еврейским популяциям (vcf_jews_bgz.vcf.gz);  <br>
+- из общего vcf.gz файла удаляется один родственный образец (nx1575, он уже известен ранее, pi hat=0.5386 с образцом kl9502);  <br>
 - проводится фильтрация общего vcf, LD-pruning, PCA. Все полученные данные сохраняются в папку output (создается в папке с vcf файлами, которые объединяли);  <br>
 - создается Python-скрипт, который загружает результаты PCA, сопоставляет образцы с группами из таблицы jews_and_new_groups.csv (ID новых образцов добавляются в таблицу, группа - new); <br>
 - строится PCA-график PC1–PC2 и PCA-график PC1–PC3 с эллипсами для известных популяций (для графика PC1-PC3), на графике обозначаются ID новых образцов; <br>
@@ -16,4 +16,18 @@
 - общий vcf файл по популяциям (vcf_jews_bgz.vcf.gz)  <br>
 - таблица с обозначениями ID и групп еврейских популяций из общего файла vcf_jews_bgz.vcf.gz (jews_and_new_groups.csv) <br>
 <img width="639" height="412" alt="image" src="https://github.com/user-attachments/assets/5c0d87b3-b0dd-4fd0-85d5-613f55adfa1c" />
+
+**После выполнения скрипта в папке output (будет создана в папке с образцами) будут находиться файлы:** <br>
+- объединенный файл со всеми образцами с индексацией - merged.vcf.gz и merged.vcf.gz.csi
+- файл, который использовался для LD-pruning и PCA после фильтрации и удаления родственного образца - filtered_no_nx1575.vcf.gz
+- файлы после LD-pruning - pruned.prune.in, pruned.prune.out, pruned.log
+- файлы для PCA - pruned.bed, pruned.bim, pruned.fam, pruned.nosex
+- файлы после PCA - pruned.eigenval, pruned.eigenvec
+- таблица с данными при нормализации vcf файлов (Sample, Total, Split, Joined, Realigned,	Skipped) -  normalization_stats.tsv
+- обновленная таблица с ID новых образцов (группа - new) - jews_and_new_groups.csv
+- таблица с обозначениями принадлежности новых образцов к популяциям (согласно эллипсам по графику PCA) - samples_in_ellipses.csv
+- графики PCA - PCA_PC1_PC2.pdf, PCA_PC1_PC3_with_ellipses.pdf
+
+<img width="487" height="580" alt="image" src="https://github.com/user-attachments/assets/f5e3133c-918b-4d49-b575-a0aeeddb8022" />
+
 
