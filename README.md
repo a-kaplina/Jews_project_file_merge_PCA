@@ -11,7 +11,13 @@
 - cоздается таблица (samples_in_ellipses.csv) с данными о попадании образцов в эллипсы. Новые образцы обозначаются, как new. Если новый образец не попал в эллипс, он обозначается, как not_defined; <br>
 - графики PCA сохраняются в формате pdf (PCA_PC1_PC2.pdf, PCA_PC1_PC3_with_ellipses.pdf).
 
-**Запуск:** merge_script_jews.sh ~/absolute/path (абсолютный путь к папке с vcf файлами, которые нужно объединить) <br>
+**Программы, которые используются при выполнении скрипта: <br>**
+- bcftools 1.20
+- VCFtools (0.1.17)
+- PLINK v1.9.0-b.7.7 64-bit (22 Oct 2024)            cog-genomics.org/plink/1.9/
+- Python 3.10.10 (библиотеки pandas, numpy, matplotlib, seaborn, scipy)
+  <br>
+**Запуск скрипта:** merge_script_jews.sh ~/absolute/path (абсолютный путь к папке с vcf файлами, которые нужно объединить) <br>
  <br>
 В папке находятся: <br>
 - vcf файлы, которые нужно объединить <br>
