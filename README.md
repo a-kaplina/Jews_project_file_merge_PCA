@@ -15,8 +15,8 @@
 - bcftools 1.20
 - VCFtools (0.1.17)
 - PLINK v1.9.0-b.7.7 64-bit (22 Oct 2024)            cog-genomics.org/plink/1.9/
-- Python 3.10.10 (библиотеки pandas, numpy, matplotlib, seaborn, scipy)
-  <br>
+- Python 3.10.10 (библиотеки pandas, numpy, matplotlib, seaborn, scipy) <br>
+<br>
 **Запуск скрипта:** merge_script_jews.sh ~/absolute/path (абсолютный путь к папке с vcf файлами, которые нужно объединить) <br>
  <br>
 В папке находятся: <br>
