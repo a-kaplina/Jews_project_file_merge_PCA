@@ -34,6 +34,8 @@ The directory should contain:
 - VCF files to be merged
 - Reference population VCF file (`vcf_jews_bgz.vcf.gz`)
 - Population annotation table (`jews_and_new_groups.csv`) containing sample IDs and Jewish population group labels corresponding to samples in `vcf_jews_bgz.vcf.gz`
+ <img width="639" height="412" alt="520185374-5c0d87b3-b0dd-4fd0-85d5-613f55adfa1c" src="https://github.com/user-attachments/assets/33503e91-5f9f-4940-b2bc-1ebc3519fb01" />
+
 
 ## Output files
 
@@ -48,3 +50,5 @@ After execution, the `output` directory (created inside the sample directory) wi
 - Updated sample-group table with newly added sample IDs (group = `new`): `jews_and_new_groups.csv`
 - Population assignment table for new samples based on PCA ellipses: `samples_in_ellipses.csv`
 - PCA plots: `PCA_PC1_PC2.pdf`, `PCA_PC1_PC3_with_ellipses.pdf`
+ <img width="487" height="580" alt="520214853-f5e3133c-918b-4d49-b575-a0aeeddb8022" src="https://github.com/user-attachments/assets/2ff5068a-c832-4932-9610-ea88a54123b4" />
+
